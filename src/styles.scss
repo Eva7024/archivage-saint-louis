@@ -1,0 +1,42 @@
+/* Charte : blanc, bleu clair, gris */
+:root {
+  --bleu: #185FA5; --bleu-clair: #E6F1FB; --bleu-pale: #EEF5FD;
+  --gris: #F1EFE8; --gris-bord: #D3D1C7; --texte-doux: #888;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; background: #F7F8FA; color: #2c2c2a; }
+button, input, select, textarea { font: inherit; }
+
+.page { padding: 1.5rem; display: grid; gap: 1.25rem; align-content: start; }
+.page-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+h2 { font-size: 1.2rem; font-weight: 500; margin: 0; }
+h3 { font-size: 0.95rem; font-weight: 500; margin: 0 0 0.75rem; color: var(--bleu); }
+
+.card { background: #fff; border-radius: 12px; border: 0.5px solid rgba(0,0,0,0.1); padding: 1rem; overflow-x: auto; }
+.card.sans-marge { padding: 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+th { padding: 0.65rem 0.85rem; text-align: left; font-size: 0.72rem; font-weight: 500; color: #888; background: var(--gris); border-bottom: 1px solid rgba(0,0,0,0.08); }
+td { padding: 0.7rem 0.85rem; border-bottom: 0.5px solid rgba(0,0,0,0.06); vertical-align: middle; }
+tbody tr:hover td { background: var(--bleu-pale); }
+td a { color: var(--bleu); text-decoration: none; font-weight: 500; }
+.vide { text-align: center; padding: 2rem; color: #999; }
+
+input, select, textarea { padding: 0.55rem 0.7rem; border: 1px solid var(--gris-bord); border-radius: 8px; font-size: 0.875rem; background: #fff; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--bleu); box-shadow: 0 0 0 3px rgba(24,95,165,0.1); }
+.filtres { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.filtres input, .filtres select { flex: 1 1 160px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { font-size: 0.78rem; font-weight: 500; color: #555; }
+
+.btn-primary { background: var(--bleu); color: #fff; border: none; border-radius: 8px; padding: 0.55rem 1rem; font-size: 0.875rem; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn-primary:disabled { background: var(--gris-bord); cursor: not-allowed; }
+.btn-secondary { padding: 0.55rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.875rem; cursor: pointer; background: #fff; color: #555; }
+.alert { padding: 0.6rem 0.85rem; border-radius: 8px; font-size: 0.82rem; }
+.alert.error { background: #FCEBEB; color: #791F1F; }
+.alert.ok { background: var(--bleu-clair); color: #0C447C; }
+
+.badge { font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 10px; white-space: nowrap; }
+.st-BROUILLON { background: var(--gris); color: #5F5E5A; } .st-SOUMIS { background: var(--bleu-clair); color: #0C447C; }
+.st-VALIDE { background: #E1F5EE; color: #085041; } .st-ARCHIVE { background: var(--bleu); color: #fff; } .st-REJETE { background: #FCEBEB; color: #791F1F; }
